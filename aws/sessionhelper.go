@@ -6,13 +6,20 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 )
 
-// GenerateAWSSession is used to create a single session to be used by all calls
-func GenerateAWSSession() (*session.Session, error) {
-	awsSession, err := session.NewSession()
-	if err != nil {
-		log.Fatal("Failed to create an AWS session. App will not start up..")
-		return nil, err
+var sharedSession *session.Session
+
+// GetAWSSession is used to create a single session to be used by all calls
+func GetAWSSession() *session.Session {
+
+	if sharedSession != nil {
+		return sharedSession
 	}
 
-	return awsSession, nil
+	sharedSession, err := session.NewSession()
+	if err != nil {
+		log.Fatal("Failed to create an AWS session. App will not start up..")
+		panic(err)
+	}
+
+	return sharedSession
 }

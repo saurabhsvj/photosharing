@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"os"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -31,10 +30,8 @@ func GetBucketList(session *session.Session) {
 }
 
 // WriteImageToBucket writes a new image object to S3
-func WriteImageToBucket(session *session.Session, bucketName string, file *os.File, fileSize int64) (uuid.UUID, error) {
+func WriteImageToBucket(session *session.Session, bucketName string, fileName string, buffer []byte, fileSize int64) (uuid.UUID, error) {
 	u1 := uuid.NewV4()
-	buffer := make([]byte, fileSize)
-	file.Read(buffer)
 
 	fileBytes := bytes.NewReader(buffer)
 	fileType := http.DetectContentType(buffer)
@@ -52,10 +49,10 @@ func WriteImageToBucket(session *session.Session, bucketName string, file *os.Fi
 
 	if err != nil {
 		// Print the error and exit.
-		fmt.Printf("Unable to upload %q to %q, %v", file.Name(), bucketName, err)
+		fmt.Printf("Unable to upload %q to %q, %v", fileName, bucketName, err)
 		return u1, err
 	}
 
-	fmt.Printf("Successfully uploaded %q to %q\n", file.Name(), bucketName)
+	fmt.Printf("Successfully uploaded %q to %q\n", fileName, bucketName)
 	return u1, nil
 }
