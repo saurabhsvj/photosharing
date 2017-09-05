@@ -1,0 +1,9 @@
+package: github.com/saurabhsvj/photosharing
+import:
+- package: github.com/aws/aws-sdk-go
+  version: v1.10.37
+- package: github.com/satori/go.uuid
+  version: v1.1.0
+- package: github.com/kataras/iris
+  version: v8.4.0
+- package: github.com/kataras/golog

@@ -1,0 +1,132 @@
+hash: 89d6dc7f7bd25f8ac5a39df2b1ee7ef7f3c6b89c12cadd816c7ae1d0dcf39878
+updated: 2017-09-04T16:50:30.582581588-07:00
+imports:
+- name: github.com/aws/aws-sdk-go
+  version: 2dd0010a66ff968eb03c2507cfb5deab080c5d93
+  subpackages:
+  - aws
+  - aws/awserr
+  - aws/awsutil
+  - aws/client
+  - aws/client/metadata
+  - aws/corehandlers
+  - aws/credentials
+  - aws/credentials/ec2rolecreds
+  - aws/credentials/endpointcreds
+  - aws/credentials/stscreds
+  - aws/defaults
+  - aws/ec2metadata
+  - aws/endpoints
+  - aws/request
+  - aws/session
+  - aws/signer/v4
+  - internal/shareddefaults
+  - private/protocol
+  - private/protocol/query
+  - private/protocol/query/queryutil
+  - private/protocol/rest
+  - private/protocol/restxml
+  - private/protocol/xml/xmlutil
+  - service/s3
+  - service/s3/s3iface
+  - service/s3/s3manager
+  - service/sts
+- name: github.com/aymerick/raymond
+  version: 72acac2207479d21dd45898c2a4264246c818148
+  subpackages:
+  - ast
+  - lexer
+  - parser
+- name: github.com/BurntSushi/toml
+  version: a368813c5e648fee92e5f6c30e3944ff9d5e8895
+- name: github.com/eknkc/amber
+  version: b8bd8b03e4f747e33f092617225e9fa8076c0448
+  subpackages:
+  - parser
+- name: github.com/fatih/structs
+  version: 7e5a8eef611ee84dd359503f3969f80df4c50723
+- name: github.com/flosch/pongo2
+  version: 58f1f3387f7c57843ff829d92a759d08abe5a63f
+- name: github.com/go-ini/ini
+  version: c787282c39ac1fc618827141a1f762240def08a3
+- name: github.com/iris-contrib/form-binder
+  version: ed52a69d2bfbe92c9e8c5a35cad28da183ededdc
+- name: github.com/jmespath/go-jmespath
+  version: bd40a432e4c76585ef6b72d3fd96fb9b6dc7b68d
+- name: github.com/Joker/jade
+  version: 35b3f5bdbcc920cd31f4870536dbc63be8530541
+- name: github.com/json-iterator/go
+  version: d80309af3bfd0b084e88c732056a4118f94e49f8
+- name: github.com/juju/errors
+  version: c7d06af17c68cd34c835053720b21f6549d9b0ee
+- name: github.com/kataras/golog
+  version: 2ed680e7b1f34147164fa8073373e14fce02ac30
+- name: github.com/kataras/iris
+  version: 5e0fb95f46bab5382836fafce8a79cb322ed5a46
+  subpackages:
+  - cache
+  - cache/cfg
+  - cache/client
+  - cache/client/rule
+  - cache/entry
+  - cache/ruleset
+  - cache/uri
+  - context
+  - core/errors
+  - core/handlerconv
+  - core/host
+  - core/memstore
+  - core/netutil
+  - core/router
+  - core/router/macro
+  - core/router/macro/interpreter/ast
+  - core/router/macro/interpreter/lexer
+  - core/router/macro/interpreter/parser
+  - core/router/macro/interpreter/token
+  - core/router/node
+  - middleware/logger
+  - middleware/recover
+  - mvc
+  - mvc/activator
+  - mvc/activator/field
+  - mvc/activator/methodfunc
+  - mvc/activator/model
+  - mvc/activator/persistence
+  - sessions
+  - view
+- name: github.com/kataras/pio
+  version: 825e39f34365e7db2c9fbc3692c16220e3bd7418
+  subpackages:
+  - terminal
+- name: github.com/klauspost/compress
+  version: f3dce52e0576655d55fd69e74b63da96ad1108f3
+  subpackages:
+  - flate
+  - gzip
+- name: github.com/klauspost/cpuid
+  version: ae7887de9fa5d2db4eaa8174a7eff2c1ac00f2da
+- name: github.com/microcosm-cc/bluemonday
+  version: 68fecaef60268522d2ac3f0123cec9d3bcab7b6e
+- name: github.com/russross/blackfriday
+  version: 4048872b16cc0fc2c5fd9eacf0ed2c2fedaa0c8c
+- name: github.com/ryanuber/columnize
+  version: abc90934186a77966e2beeac62ed966aac0561d5
+- name: github.com/satori/go.uuid
+  version: 879c5887cd475cd7864858769793b2ceb0d44feb
+- name: golang.org/x/crypto
+  version: 81e90905daefcd6fd217b62423c0908922eadb30
+  subpackages:
+  - acme
+  - acme/autocert
+- name: golang.org/x/net
+  version: 66aacef3dd8a676686c7ae3716979581e8b03c47
+  subpackages:
+  - html
+  - html/atom
+- name: golang.org/x/sys
+  version: 7ddbeae9ae08c6a06a59597f0c9edbc5ff2444ce
+  subpackages:
+  - unix
+- name: gopkg.in/yaml.v2
+  version: eb3733d160e74a9c7e442f435eb3bea458e1d19f
+testImports: []
